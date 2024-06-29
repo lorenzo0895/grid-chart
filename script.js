@@ -1,6 +1,6 @@
 const ctx = document.getElementById('myChart');
 
-const numberOfRows = 3;
+const numberOfRows = 6;
 const tagsInputs = [];
 const valuesInputs = [];
 
@@ -24,7 +24,10 @@ const data = {
         backgroundColor: [
             'rgb(255, 99, 132)',
             'rgb(54, 162, 235)',
-            'rgb(255, 205, 86)'
+            'rgb(255, 205, 86)',
+            'rgb(255,159,64)',
+            'rgb(153,102,255)',
+            'rgb(201,203,207)',
         ],
         hoverOffset: 4
     }]
