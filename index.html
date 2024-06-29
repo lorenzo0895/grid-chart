@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Grid Chart</title>
 </head>
-<body>
-    
 
+<body>
+    <div class="gaston-chart-table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Etiqueta</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input value="Etiqueta 1" id="tag1" type="text"></td>
+                    <td><input value="10" id="value1" type="number"></td>
+                </tr>
+                <tr>
+                    <td><input value="Etiqueta 2" id="tag2" type="text"></td>
+                    <td><input value="40" id="value2" type="number"></td>
+                </tr>
+                <tr>
+                    <td><input value="Etiqueta 3" id="tag3" type="text"></td>
+                    <td><input value="50" id="value3" type="number"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="gaston-chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
