@@ -3,6 +3,8 @@ const ctx = document.getElementById('myChart');
 const numberOfRows = 6;
 const tagsInputs = [];
 const valuesInputs = [];
+const totalInput = document.getElementById('valueTotal');
+let total = 0;
 
 for (let i = 0; i < numberOfRows; i++) {
     tagsInputs.push(document.getElementById(`tag${i + 1}`));
@@ -43,6 +45,21 @@ const chart = new Chart(ctx, config);
 function updateChartData() {
     data.labels = tagsInputs.map(x => x.value);
     data.datasets[0].data = valuesInputs.map(x => x.value);
+    total = valuesInputs.reduce((acc, curr) => acc + Number(curr.value), 0);
+    totalInput.value = total;
+    if (total === 100) {
+        toggleAlert(true);
+    } else {
+        toggleAlert(false);
+    }
     chart.update();
+}
+
+function toggleAlert(hide) {
+    if (hide) {
+        document.getElementById('alert').classList.add('hidden');
+    } else {
+        document.getElementById('alert').classList.remove('hidden');
+    }
 }
 
